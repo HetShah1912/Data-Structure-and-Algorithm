@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile and run",
+      "type": "shell",
+      "command": "javac \"${file}\" && java -cp \"${fileDirname}\" \"${fileBasenameNoExtension}\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\"",
+      "options": {
+        "cwd": "${fileDirname}",
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/d", "/c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      }
+    }
+  ]
+}
